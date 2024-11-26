@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frappe Snippets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .snippet {
+            margin-bottom: 20px;
+        }
+        .snippet-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .snippet-detail {
+            margin-left: 20px;
+        }
+        .snippet-detail code {
+            background-color: #f9f9f9;
+            padding: 4px;
+            display: block;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frappe JS Snippets</h1>
+
+    <div class="snippet">
+        <div class="snippet-title">form event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frm, form, frappe_form_js, form_script</p>
+            <p><strong>body:</strong></p>
+            <code>
+frappe.ui.form.on("$1", {
+    ${2|setup,onload,refresh|}(frm) {
+     $0
+    }
+});
+            </code>
+            <p><strong>description:</strong> Form Scripts depend on events to trigger. Here are the list of all Form Events that are triggered by Form. These events will get frm as the first parameter in their handler functions.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form setup event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> setup_frappe, setup, setup_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+setup: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered once when the form is created for the first time.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form before_load event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> before_load_frappe, before_load, before_load_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+before_load: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered before the form is about to load.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form onload event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> onload_frappe, onload, onload_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+onload: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered when the form is loaded and is about to render.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form refresh event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> refresh_frappe, refresh, refresh_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+refresh: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered when the form is loaded and rendered.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form onload_post_render event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> onload_post_render_frappe, onload_post_render, onload_post_render_event, opr</p>
+            <p><strong>body:</strong></p>
+            <code>
+onload_post_render: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered after the form is loaded and rendered.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form validate event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> validate_frappe, validate, validate_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+validate: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered before before_save.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form before_save event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> before_save_frappe, before_save, before_save_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+before_save: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered before save is called.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form after_save event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> after_save_frappe, after_save, after_save_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+after_save: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered after form is saved.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form before_submit event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> before_submit_frappe, before_submit, before_submit_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+before_submit: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered before submit is called.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form on_submit event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> on_submit_frappe, on_submit, on_submit_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+on_submit: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered after form is submitted.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form before_cancel event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> before_cancel_frappe, before_cancel, before_cancel_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+before_cancel: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered before cancel is called.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form after_cancel event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> after_cancel_frappe, after_cancel, after_cancel_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+after_cancel: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered after form is cancelled.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form before_discard event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> before_discard_frappe, before_discard, before_discard_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+before_discard: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered before discard is called.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form after_discard event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> after_discard_frappe, after_discard, after_discard_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+after_discard: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered after form is discarded.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form timeline_refresh event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> timeline_refresh_frappe, timeline_refresh, timeline_refresh_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+timeline_refresh: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered after form timeline is rendered.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form {fieldname}_on_form_rendered event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> field_on_form_rendered_frappe, field_on_form_rendered, field_form_rendered_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+${1:fieldname}_on_form_rendered: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered when a row is opened as a form in a Table field.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form {fieldname} event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> fieldname_frappe, fieldname, field_change_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+${1:fieldname}: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered when the value of fieldname is changed.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form get_email_recipient_filters event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> email_recipient_filters_frappe, get_email_recipient_filters, email_filters_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+get_email_recipient_filters: function (frm, field) {
+    return $2;
+},
+            </code>
+            <p><strong>description:</strong> Called by the email dialog to fetch default filters for email recipients.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">form get_email_recipients event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> email_recipients_frappe, get_email_recipients, email_recipients_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+get_email_recipients: function (frm, field) {
+    return $2;
+},
+            </code>
+            <p><strong>description:</strong> Called by the email dialog to fetch default recipients.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">child_table before_{fieldname}_remove event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> before_field_remove_frappe, before_field_remove, before_field_remove_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+before_${1:fieldname}_remove: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered when a row is about to be removed from a Table field.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">child_table {fieldname}_add event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> field_add_frappe, field_add, field_add_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+${1:fieldname}_add: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered when a row is added to a Table field.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">child_table {fieldname}_remove event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> field_remove_frappe, field_remove, field_remove_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+${1:fieldname}_remove: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered when a row is removed from a Table field.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">child_table {fieldname}_move event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> field_move_frappe, field_move, field_move_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+${1:fieldname}_move: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered when a row is reordered to another location in a Table field.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">child_table form_render event</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> child_table_form_render_frappe, child_table_form_render, child_table_form_render_event</p>
+            <p><strong>body:</strong></p>
+            <code>
+form_render: function (frm) {
+    $2
+},
+            </code>
+            <p><strong>description:</strong> Triggered when a row is opened as a form in a Table field.</p>
+        </div>
+    </div>
+    <div class="snippet">
+        <div class="snippet-title">set single value with frm.set_value</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frm_set_value_single, frm.set_value, set_value</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.set_value('${1:fieldname}', '${2:value}')
+            </code>
+            <p><strong>description:</strong> Set a single field value using frm.set_value and handle the promise.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">set multiple values with frm.set_value</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frm_set_value_multiple, frm.set_value, set_value</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.set_value({
+      ${1:fieldname1}: '${2:value1}',
+      ${3:fieldname2}: '${4:value2}'
+    })
+            </code>
+            <p><strong>description:</strong> Set multiple field values at once using frm.set_value and handle the promise.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">frm.set_value with promise return</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frmsetvalue_promise, frm.set_value_promise, set_value</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.set_value('${1:fieldname}', '${2:value}')
+        .then(() => {
+            // do something after value is set
+        })
+            </code>
+            <p><strong>description:</strong> Set value and do something after value set.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">trigger form save with frm.save</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frmsave, save_form, trigger_form_save, frm.save, form_save</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.save(${2| ,"Submit","Update","Cancel"|});
+            </code>
+            <p><strong>description:</strong> Trigger form save. Will trigger validate, before_save, after_save, timeline_refresh and refresh. It can be used to trigger other save actions like Submit, Cancel and Update. In that case, the relevant events will be triggered.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">enable save button with frm.enable_save</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frmenablesave, enable_save_button, enable_form_save, frm.enable_save</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.enable_save();
+            </code>
+            <p><strong>description:</strong> Enable the Save button in the form.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">disable save button with frm.disable_save</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frmdisablesave, disable_save, disable_form_save, frm.disable_save</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.disable_save();
+            </code>
+            <p><strong>description:</strong> Disable the Save button in the form.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">enable/disable save button based on user role</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frmenablesavecustom, enable_save_custom, enable_form_save_custom, frm.enable_save</p>
+            <p><strong>body:</strong></p>
+            <code>
+    // Enable save button conditionally based on user role
+    if (frappe.user_roles.includes('Custom Role')) {
+        frm.enable_save();
+    } else {
+        frm.disable_save();
+    }
+            </code>
+            <p><strong>description:</strong> Enable or disable the Save button conditionally based on user roles.</p>
+        </div>
+    </div>
+
+    <div class="snippet">
+        <div class="snippet-title">open email dialog with frm.email_doc</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frmmaildoc, email_dialog, open_email_dialog, frm.email_doc, email_doc</p>
+            <p><strong>body:</strong></p>
+            <code>
+    // Open email dialog
+    frm.email_doc();
+            </code>
+            <p><strong>description:</strong> Open the email dialog for this form.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">open email dialog with custom message using frm.email_doc</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frmmaildocmessage, email_dialog_message, open_email_dialog_message, frm.email_doc, email_doc</p>
+            <p><strong>body:</strong></p>
+            <code>
+    // Open email dialog with some message
+    frm.email_doc(`Hello ${frm.doc.customer_name}`);
+            </code>
+            <p><strong>description:</strong> Open the email dialog with a custom message for this form.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">reload document with frm.reload_doc</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frmreloaddoc, reload_doc, reload_form_doc, frm.reload_doc</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.reload_doc();
+            </code>
+            <p><strong>description:</strong> Reload the document with the latest values from the server and call frm.refresh().</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">refresh field with frm.refresh_field</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frmrefreshfield, refresh_field, frm.refresh_field</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.refresh_field('${1:field_name}');
+            </code>
+            <p><strong>description:</strong> Refresh the field and its dependencies. Replace 'field_name' with the actual field name.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">check if form is dirty with frm.is_dirty</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frmdirtycheck, check_dirty_form, frm.is_dirty, is_dirty</p>
+            <p><strong>body:</strong></p>
+            <code>
+    if (frm.is_dirty()) {
+        frappe.show_alert('${1:Please save form before attaching a file}');
+    }
+            </code>
+            <p><strong>description:</strong> Check if the form has unsaved changes and show an alert.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">check if form is new with frm.is_new</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> is_new, frmnewcheck, check_new_form, frm.is_new</p>
+            <p><strong>body:</strong></p>
+            <code>
+    // Check if the form is new and not saved yet
+    if (frm.is_new()) {
+        $2console.log('Form is New');
+    }
+            </code>
+            <p><strong>description:</strong> Check if the form is new and unsaved, then add a custom button.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">add custom button</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> add_custom_button, frm.add_custom_button</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.add_custom_button(__('${1:Button Name}'), () => {
+        ${2:console.log('perform_Action')}
+    });
+            </code>
+            <p><strong>description:</strong> Add a custom button to the Frappe form with translation support.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">add custom button in group</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> add_custom_button_group, frm.add_custom_button</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.add_custom_button(__(\"${1:Button Name}\"), () => {
+        ${2:console.log('perform_Action')}
+    }, __('${3:Group Name}'));
+            </code>
+            <p><strong>description:</strong> Add a custom button in a group to the Frappe form with translation support.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">custom button to navigate</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> custom_button_navigate</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.add_custom_button(__(\"${1:Button Name}\"), () => {
+        frappe.set_route(\"Form\", ${2:Document Type}, ${3:Document Name});
+    });
+            </code>
+            <p><strong>description:</strong> Add a custom button to navigate to another form.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">remove custom button</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> remove_custom_button</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.remove_custom_button(__(\"${1:Button Label}\"), ${2:__(\"${3:Group Name}\") || null});
+            </code>
+            <p><strong>description:</strong> Remove a specific custom button by label (and optionally group).</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">change custom button type</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> set_custom_button_status, change_custom_button_type</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.change_custom_button_type(__(\"${1:Button Label}\"), ${2:__(\"${3:Group Name}\") || null}, '${4|\"primary\", \"danger\"|}');
+    frm.refresh();
+            </code>
+            <p><strong>description:</strong> Set the type and refresh a custom button dynamically.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">add row to child table</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> add_child_table_row, add_child</p>
+            <p><strong>body:</strong></p>
+            <code>
+    let values = {
+        ${1:fieldname1}: \"${2:value}\",
+        ${3:fieldname2}: \"${4:value}\"
+    };
+    
+    let row = frm.add_child(\"${5:child_table_field}\", values);
+    
+    frm.refresh_field(\"${5:child_table_field}\");
+            </code>
+            <p><strong>description:</strong> Add a row dynamically to a child table field.</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">frappe call</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> frappe.call, frappe_call</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frappe.call({
+        method: \"$2\",
+        args: {
+            $3
+        },
+        freeze: ${4|true,false|},
+        async: ${4|true,false|},
+        callback: function(r) {
+            if(r.message) {
+                frappe.msgprint(__('Message'));
+            }
+        }
+    });
+            </code>
+            <p><strong>description:</strong> Call API function</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">set query filter</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> set_query, link_filter</p>
+            <p><strong>body:</strong></p>
+            <code>
+    frm.set_query(\"${1:fieldname}\", function(doc) {
+        return {
+            filters: {
+                ${2:link_doc_fieldname}: ${3:value},
+                $4: $5
+            },
+        };
+    });
+            </code>
+            <p><strong>description:</strong> Set Query Filter on a Field</p>
+        </div>
+    </div>
+    
+    <div class="snippet">
+        <div class="snippet-title">dialog box</div>
+        <div class="snippet-detail">
+            <p><strong>prefix:</strong> dialog_box, frappe_dialog, dialog</p>
+            <p><strong>body:</strong></p>
+            <code>
+    let dialog = new frappe.ui.Dialog({
+        title: __(\"$1\"),
+        fields: [
+            {
+                label: __(\"$2\"),
+                fieldname: \"$3\",
+                fieldtype: \"$4\",
+                options: \"$5\",
+                reqd: $6
+            },
+            // Add more fields as needed
+        ],
+        primary_action_label: __(\"$12\"),
+        primary_action: function() {
+            dialog.hide();
+            // Additional actions on save
+        }
+    });
+    
+    dialog.show();
+            </code>
+            <p><strong>description:</strong> Open a dialog box with a custom form.</p>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>
